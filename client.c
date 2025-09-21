@@ -69,9 +69,9 @@ int main(int argc, char *argv[]) {
     }
 
     // Replace these with the actual hex payloads
-    send_hex_command(sock, "6ddc046ceaf6402a7c21b720c89c2d6b53302adc4118c6"); // connect
-    send_hex_command(sock, "82c9ea780914f52acb15f367425e2988628c463a"); // open
-    send_hex_command(sock, "a2ded5a59335fe9f7feec3fd4ac37f137eee2d5974"); // disconnect
+    send_hex_command(sock, "f8e9df6b3d8ea7e6c95e440834b862eca06b318a7303a5"); // connect
+    send_hex_command(sock, "b9c45a54fcf0ba9cb44bf4e180c728794b3f2ac427822c0c"); // open
+    send_hex_command(sock, "123d7d1a219704857916620b30238ce0e9eb324af3e046cd6ab9"); // disconnect
 
     close(sock);
     return 0;
