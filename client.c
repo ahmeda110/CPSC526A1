@@ -6,14 +6,33 @@
 
 #define BUFFER_SIZE 1024
 
-void send_command(int sock, const char *command) {
-    send(sock, command, strlen(command), 0);
-    char buffer[BUFFER_SIZE] = {0};
-    int bytes_received = recv(sock, buffer, BUFFER_SIZE - 1, 0);
+// Convert hex string to byte array
+int hex_to_bytes(const char *hex, unsigned char *bytes) {
+    int len = strlen(hex);
+    if (len % 2 != 0) return -1;
+
+    for (int i = 0; i < len / 2; i++) {
+        sscanf(hex + 2*i, "%2hhx", &bytes[i]);
+    }
+    return len / 2;
+}
+
+void send_hex_command(int sock, const char *hex_command) {
+    unsigned char buffer[BUFFER_SIZE];
+    int byte_len = hex_to_bytes(hex_command, buffer);
+    if (byte_len < 0) {
+        fprintf(stderr, "Invalid hex string\n");
+        return;
+    }
+
+    send(sock, buffer, byte_len, 0);
+
+    char response[BUFFER_SIZE] = {0};
+    int bytes_received = recv(sock, response, BUFFER_SIZE - 1, 0);
     if (bytes_received > 0) {
-        buffer[bytes_received] = '\0';
-        printf("Sent: %s\n", command);
-        printf("Received: %s\n", buffer);
+        response[bytes_received] = '\0';
+        printf("Sent hex: %s\n", hex_command);
+        printf("Received: %s\n", response);
     } else {
         perror("recv");
     }
@@ -49,9 +68,10 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    send_command(sock, "3996123f13a9c1a37321016566b85cb3"); //connect
-    send_command(sock, "e19b15d6cdb17ecaaacab66501cbdb26"); // open
-    send_command(sock, "393c7eb9b0ba57eb5c385304f9722f62"); //disconnect
+    // Replace these with the actual hex payloads
+    send_hex_command(sock, "3996123f13a9c1a37321016566b85cb3"); // connect
+    send_hex_command(sock, "e19b15d6cdb17ecaaacab66501cbdb26"); // open
+    send_hex_command(sock, "393c7eb9b0ba57eb5c385304f9722f62"); // disconnect
 
     close(sock);
     return 0;
