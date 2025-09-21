@@ -71,7 +71,6 @@ int main(int argc, char *argv[]) {
     // Replace these with the actual hex payloads
     send_hex_command(sock, "8d8912223861f41f6c7069ea3246f31b1f64f9998f5e9e"); 
     send_hex_command(sock, "f5235486a008107c8b35fc74afe3913ccf589a2ffae1bc69b063"); 
-    send_hex_command(sock, "a35ea40553c371c32c5bf5734f10687236478a451681"); 
     send_hex_command(sock, "6c37d3646c5dd050cacd70a36eef2014511283b3bc9b6bd0b651c6e5"); 
 
 
