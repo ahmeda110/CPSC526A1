@@ -49,9 +49,9 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    send_command(sock, "3996123f13a9c1a37321016566b85cb3"); //connect
-    send_command(sock, "e19b15d6cdb17ecaaacab66501cbdb26"); // open
-    send_command(sock, "393c7eb9b0ba57eb5c385304f9722f62"); //disconnect
+    send_command(sock, "connect");
+    send_command(sock, "open");
+    send_command(sock, "disconnect");
 
     close(sock);
     return 0;
