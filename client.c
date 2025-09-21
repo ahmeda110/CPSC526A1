@@ -69,10 +69,28 @@ int main(int argc, char *argv[]) {
     }
 
     // Replace these with the actual hex payloads
-    send_hex_command(sock, "d5a776c48d9ab3681770c66cd769ba1a3c2faf6d814a66a768390143b7ef489d"); // connect
-    send_hex_command(sock, "6e98fd1d9cc44e744367368dc772449c21c6aad856de995fd128587565a6f839"); // connect
-    send_hex_command(sock, "73c9c537173a7b7e700845e34ce1fc06a3b3e22b9a25d2a2920e9648c547908c"); // disconnect
+    send_hex_command(sock, "6ddc046ceaf6402a7c21b720c89c2d6b53302adc4118c6"); // connect
+    send_hex_command(sock, "c2468e7956e903b560590b49ef247e5c19e987147324f010"); // open
+    send_hex_command(sock, "a2ded5a59335fe9f7feec3fd4ac37f137eee2d5974"); // disconnect
 
     close(sock);
     return 0;
-} //1313B098
+} // SECURITY BREACH: DOOR OPEN!  code: B74B2245
+
+// v1
+// 636F6E6E656374 (connect)
+// 6F70656E (open)
+// 646973636F6E6E656374 (disconnect)
+// SECURITY BREACH: DOOR OPEN!  code: 832C25BC
+
+// v2
+// 3996123f13a9c1a37321016566b85cb3 
+// e19b15d6cdb17ecaaacab66501cbdb26 
+// 393c7eb9b0ba57eb5c385304f9722f62
+// SECURITY BREACH: DOOR OPEN!  code: 1313B098
+
+// v3
+// d5a776c48d9ab3681770c66cd769ba1a3c2faf6d814a66a768390143b7ef489d
+// 6e98fd1d9cc44e744367368dc772449c21c6aad856de995fd128587565a6f839 
+// 73c9c537173a7b7e700845e34ce1fc06a3b3e22b9a25d2a2920e9648c547908c
+// SECURITY BREACH: DOOR OPEN!  code: B74B2245
