@@ -70,8 +70,8 @@ int main(int argc, char *argv[]) {
 
     // Replace these with the actual hex payloads
     send_hex_command(sock, "6ddc046ceaf6402a7c21b720c89c2d6b53302adc4118c6"); // connect
-    send_hex_command(sock, "c2468e7956e903b560590b49ef247e5c19e987147324f010"); // open
-    send_hex_command(sock, "a2ded5a59335fe9f7feec3fd4ac37f137eee2d5974"); // disconnect
+    send_hex_command(sock, "82c9ea780914f52acb15f367425e2988628c463a"); // open
+    send_hex_command(sock, "0a2ded5a59335fe9f7eec3fd4ac37f137eee2d5974"); // disconnect
 
     close(sock);
     return 0;
