@@ -69,12 +69,9 @@ int main(int argc, char *argv[]) {
     }
 
     // Replace these with the actual hex payloads
-    send_hex_command(sock, "aa9666c4e715384b70a6b4a9f87c5a515cc6f0b56b3ed51a5606501405520f99"); // connect
-    send_hex_command(sock, "ea7c8c06c568ae7d8e9056fdde04a77479c36b106f9e1c8bc6bf33024fb336dc"); // connect
-    send_hex_command(sock, "6b5c7fa3a7f0495b9941d7f393a8dd0f5d409df6fe9fad11d72427460849a428"); // connect
-    send_hex_command(sock, "e3d59c92522b22a82800accf75163bd108f99f184f32070f182ad82c8e39771b"); // connect
-    send_hex_command(sock, "de788628d31f69aa12fc52f00c86d3e1ef58b176c3c07296e4cb1e43df485c2c"); // open
-    send_hex_command(sock, "65334e87db76888845fd9e80ce345f467f9877c384d2dd216c082f6fd7710888"); // disconnect
+    send_hex_command(sock, "d5a776c48d9ab3681770c66cd769ba1a3c2faf6d814a66a768390143b7ef489d"); // connect
+    send_hex_command(sock, "6e98fd1d9cc44e744367368dc772449c21c6aad856de995fd128587565a6f839"); // connect
+    send_hex_command(sock, "73c9c537173a7b7e700845e34ce1fc06a3b3e22b9a25d2a2920e9648c547908c"); // disconnect
 
     close(sock);
     return 0;
