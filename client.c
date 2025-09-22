@@ -103,7 +103,10 @@ int main(int argc, char *argv[]) {
 // SECURITY BREACH: DOOR OPEN!  code: 9F42CDB5
 
 // v5
-// 
-// 
-// 
-// 
+// SECURITY BREACH: DOOR OPEN!  code: 34527C84
+
+// v6
+// 505a942cdf64c3
+// 5c459f2c
+// 575c8921d569d9aaef2b
+// SECURITY BREACH: DOOR OPEN!  code: 5EF40527
