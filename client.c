@@ -6,7 +6,6 @@
 
 #define BUFFER_SIZE 1024
 
-// Convert hex string to byte array
 int hex_to_bytes(const char *hex, unsigned char *bytes) {
     int len = strlen(hex);
     if (len % 2 != 0) return -1;
@@ -37,7 +36,7 @@ void send_hex_command(int sock, const char *hex_command) {
         perror("recv");
     }
 }
-
+// This is the client requested in v1 and essentialy acts as garage_attacker (run ./client host_ip server_port
 int main(int argc, char *argv[]) {
     if (argc != 3) {
         fprintf(stderr, "Usage: %s <server_ip> <server_port>\n", argv[0]);
@@ -68,7 +67,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // Replace these with the actual hex payloads
+    // Replace these with the actual hex payloads for v1-6 (excluding 5 as it is changing)
     send_hex_command(sock, "8d8912223861f41f6c7069ea3246f31b1f64f9998f5e9e"); 
     send_hex_command(sock, "f5235486a008107c8b35fc74afe3913ccf589a2ffae1bc69b063"); 
     send_hex_command(sock, "6c37d3646c5dd050cacd70a36eef2014511283b3bc9b6bd0b651c6e5"); 
