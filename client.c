@@ -67,10 +67,10 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // Replace these with the actual hex payloads for v1-6 (excluding 5 as it is changing)
-    send_hex_command(sock, "d5a776c48d9ab3681770c66cd769ba1a3c2faf6d814a66a768390143b7ef489d"); 
-    send_hex_command(sock, "6e98fd1d9cc44e744367368dc772449c21c6aad856de995fd128587565a6f839"); 
-    send_hex_command(sock, "73c9c537173a7b7e700845e34ce1fc06a3b3e22b9a25d2a2920e9648c547908c"); 
+    // Replace these with the actual hex payloads for v1-6 (excluding 5 as it is changing) Now on 4
+    send_hex_command(sock, "f8e9df6b3d8ea7e6c95e440834b862eca06b318a7303a5"); 
+    send_hex_command(sock, "08e4ee968bd45fe918671dd0c909898d91895159"); 
+    send_hex_command(sock, "123d7d1a219704857916620b30238ce0e9eb324af3e046cd6ab9"); 
 
 
     close(sock);
