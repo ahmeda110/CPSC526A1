@@ -68,9 +68,9 @@ int main(int argc, char *argv[]) {
     }
 
     // Replace these with the actual hex payloads for v1-6 (excluding 5 as it is changing)
-    send_hex_command(sock, "8d8912223861f41f6c7069ea3246f31b1f64f9998f5e9e"); 
-    send_hex_command(sock, "f5235486a008107c8b35fc74afe3913ccf589a2ffae1bc69b063"); 
-    send_hex_command(sock, "6c37d3646c5dd050cacd70a36eef2014511283b3bc9b6bd0b651c6e5"); 
+    send_hex_command(sock, "d5a776c48d9ab3681770c66cd769ba1a3c2faf6d814a66a768390143b7ef489d"); 
+    send_hex_command(sock, "6e98fd1d9cc44e744367368dc772449c21c6aad856de995fd128587565a6f839"); 
+    send_hex_command(sock, "73c9c537173a7b7e700845e34ce1fc06a3b3e22b9a25d2a2920e9648c547908c"); 
 
 
     close(sock);
